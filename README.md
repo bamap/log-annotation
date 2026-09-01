@@ -1,4 +1,4 @@
-# Prepaid Common Log Annotation
+# Log Annotation
 A lightweight Java library providing declarative, annotation-driven logging for Spring applications. It offers drop-in replacements for standard Spring MVC (@GetMapping, @PostMapping, etc.) and Spring HTTP Interface (@GetExchange, @PostExchange, etc.) annotations that automatically log request/response details, execution time, and slow-operation warnings.
 
 ## Key Features
