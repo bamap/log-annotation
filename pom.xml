@@ -25,9 +25,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/bamap/execution-context-info.git</connection>
-        <developerConnection>scm:git:ssh://github.com:bamap/execution-context-info.git</developerConnection>
-        <url>https://github.com/bamap/execution-context-info/tree/main</url>
+        <connection>scm:git:git://github.com/bamap/log-annotation.git</connection>
+        <developerConnection>scm:git:ssh://github.com:bamap/log-annotation.git</developerConnection>
+        <url>https://github.com/bamap/log-annotation/tree/main</url>
     </scm>
 
     <licenses>
