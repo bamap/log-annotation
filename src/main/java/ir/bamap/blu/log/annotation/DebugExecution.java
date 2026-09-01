@@ -1,5 +1,7 @@
 package ir.bamap.blu.log.annotation;
 
+import ir.bamap.blu.log.enums.LogLevel;
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

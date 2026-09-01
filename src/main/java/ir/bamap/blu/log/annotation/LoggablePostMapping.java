@@ -1,5 +1,6 @@
 package ir.bamap.blu.log.annotation;
 
+import ir.bamap.blu.log.enums.LogLevel;
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

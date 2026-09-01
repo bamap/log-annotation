@@ -5,7 +5,7 @@
 
     <groupId>ir.bamap.blu</groupId>
     <artifactId>log-annotation</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
 
     <name>log-annotation</name>
     <description>
@@ -76,8 +76,7 @@
     </dependencyManagement>
 
     <build>
-        <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
-        <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
+        <sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
