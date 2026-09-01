@@ -1,6 +1,5 @@
-package ir.rahgozin.prepaid.common.log.annotation;
+package ir.bamap.blu.log.annotation;
 
-import ir.rahgozin.prepaid.common.log.enums.LogLevel;
 import org.springframework.core.annotation.AliasFor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -9,12 +8,12 @@ import java.lang.annotation.*;
 
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-@RequestMapping(method = RequestMethod.GET)
-public @interface LoggableGetMapping {
+@RequestMapping(method = RequestMethod.DELETE)
+public @interface LoggableDeleteMapping {
 
     int slowThresholdMs() default 600;
 
-    LogLevel level() default LogLevel.DEBUG;
+    LogLevel level() default LogLevel.INFO;
 
     @AliasFor(annotation = RequestMapping.class)
     String name() default "";
@@ -36,4 +35,5 @@ public @interface LoggableGetMapping {
 
     @AliasFor(annotation = RequestMapping.class)
     String[] produces() default {};
+
 }
