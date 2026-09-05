@@ -1,5 +1,8 @@
 # Log Annotation
-A lightweight Java library providing declarative, annotation-driven logging for Spring applications. It offers drop-in replacements for standard Spring MVC (@GetMapping, @PostMapping, etc.) and Spring HTTP Interface (@GetExchange, @PostExchange, etc.) annotations that automatically log request/response details, execution time, and slow-operation warnings.
+A lightweight Java library providing declarative, annotation-driven logging for Spring applications. 
+It offers drop-in replacements for standard Spring MVC (`@GetMapping`, `@PostMapping`, etc.) 
+and Spring HTTP Interface (`@GetExchange`, `@PostExchange`, etc.) annotations that 
+automatically log request/response details, execution time, and slow-operation warnings.
 
 ## Key Features
  - Zero-Boilerplate Logging: Annotate controller methods or service classes to enable structured logging instantly.
@@ -43,9 +46,9 @@ public class UserController {
 }
 ```
 
-### 3. Enable Aspect (Required) Ensure you have an AspectJ @Aspect (in your application codebase) that intercepts @Loggable... and @LogExecution annotations to perform the actual logging logic (MDC population, request/response body capture, duration calculation).
-
-Configuration
+### 3. Enable Aspect(Required) 
+Ensure you have an AspectJ `@Aspect` (in your application codebase) that intercepts @Loggable... and `@LogExecution`
+annotations to perform the actual logging logic (MDC population, request/response body capture, duration calculation).
 
 ## Configuration
 
