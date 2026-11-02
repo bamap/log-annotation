@@ -5,7 +5,7 @@
 
     <groupId>ir.bamap.blu</groupId>
     <artifactId>log-annotation</artifactId>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
 
     <name>log-annotation</name>
     <description>
@@ -51,7 +51,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <spring-boot.version>4.1.1</spring-boot.version>
+        <spring-boot.version>4.1.2</spring-boot.version>
     </properties>
 
     <dependencies>
