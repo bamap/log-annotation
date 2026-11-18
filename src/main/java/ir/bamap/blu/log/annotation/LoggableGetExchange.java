@@ -6,14 +6,41 @@ import org.springframework.web.service.annotation.HttpExchange;
 
 import java.lang.annotation.*;
 
+@Documented
+@LogExecution
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-@Documented
 @HttpExchange(method = "GET")
 public @interface LoggableGetExchange {
+    @AliasFor(annotation = LogExecution.class)
     int slowThresholdMs() default 600;
 
+    @AliasFor(annotation = LogExecution.class)
     LogLevel level() default LogLevel.DEBUG;
+
+    /**
+     * If contains `all` or `*`, it masks all arguments
+     */
+    @AliasFor(annotation = LogExecution.class)
+    String[] maskArgs() default {};
+
+    /**
+     * If contains `all` or `*`, it ignores all arguments
+     */
+    @AliasFor(annotation = LogExecution.class)
+    String[] ignoreArgs() default {};
+
+    /**
+     * If contains `all` or `*`, it masks all result fields
+     */
+    @AliasFor(annotation = LogExecution.class)
+    String[] maskResultFields() default {};
+
+    /**
+     * If contains `all` or `*`, it ignores all result fields
+     */
+    @AliasFor(annotation = LogExecution.class)
+    String[] ignoreResultFields() default {};
 
     @AliasFor(annotation = HttpExchange.class)
     String value() default "";

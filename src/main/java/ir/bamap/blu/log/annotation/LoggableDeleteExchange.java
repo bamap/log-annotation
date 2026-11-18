@@ -12,11 +12,38 @@ import java.lang.annotation.*;
 @HttpExchange(
         method = "DELETE"
 )
+@LogExecution
 public @interface LoggableDeleteExchange {
 
+    @AliasFor(annotation = LogExecution.class)
     int slowThresholdMs() default 600;
 
+    @AliasFor(annotation = LogExecution.class)
     LogLevel level() default LogLevel.INFO;
+
+    /**
+     * If contains `all` or `*`, it masks all arguments
+     */
+    @AliasFor(annotation = LogExecution.class)
+    String[] maskArgs() default {};
+
+    /**
+     * If contains `all` or `*`, it ignores all arguments
+     */
+    @AliasFor(annotation = LogExecution.class)
+    String[] ignoreArgs() default {};
+
+    /**
+     * If contains `all` or `*`, it masks all result fields
+     */
+    @AliasFor(annotation = LogExecution.class)
+    String[] maskResultFields() default {};
+
+    /**
+     * If contains `all` or `*`, it ignores all result fields
+     */
+    @AliasFor(annotation = LogExecution.class)
+    String[] ignoreResultFields() default {};
 
     @AliasFor(annotation = HttpExchange.class)
     String value() default "";

@@ -7,14 +7,41 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.lang.annotation.*;
 
+@LogExecution
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 @RequestMapping(method = RequestMethod.GET)
 public @interface LoggableGetMapping {
 
+    @AliasFor(annotation = LogExecution.class)
     int slowThresholdMs() default 600;
 
+    @AliasFor(annotation = LogExecution.class)
     LogLevel level() default LogLevel.DEBUG;
+
+    /**
+     * If contains `all` or `*`, it masks all arguments
+     */
+    @AliasFor(annotation = LogExecution.class)
+    String[] maskArgs() default {};
+
+    /**
+     * If contains `all` or `*`, it ignores all arguments
+     */
+    @AliasFor(annotation = LogExecution.class)
+    String[] ignoreArgs() default {};
+
+    /**
+     * If contains `all` or `*`, it masks all result fields
+     */
+    @AliasFor(annotation = LogExecution.class)
+    String[] maskResultFields() default {};
+
+    /**
+     * If contains `all` or `*`, it ignores all result fields
+     */
+    @AliasFor(annotation = LogExecution.class)
+    String[] ignoreResultFields() default {};
 
     @AliasFor(annotation = RequestMapping.class)
     String name() default "";
